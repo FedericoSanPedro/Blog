@@ -55,6 +55,17 @@
                         Edit
                     </a>
                 </span>
+
+                <span class="float-right">
+                    <form action="/blog/{{ $post->slug }}/delete" method="POST">
+                        @csrf
+                        @method('delete')
+
+                        <button type="submit" class="text-red-500 pr-3">
+                            Delete
+                        </button>
+                    </form>
+                </span>
                 
             @endif
 
